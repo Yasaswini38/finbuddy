@@ -1,4 +1,5 @@
 import yfinance as yf
+import re
 import pandas as pd
 
 def fetch_stock_data(ticker):
@@ -12,8 +13,6 @@ def fetch_top_etfs(count=10):
 def fetch_top_mutual_funds(count=5):
     tickers = ['VTSAX', 'SWPPX', 'FXAIX', 'VFIAX', 'VIGAX']
     return tickers[:count]
-
-import re
 
 def extract_tickers_from_advice(advice_raw):
     tickers = set(re.findall(r"\b[A-Z]{2,5}(?:\.NS)?\b", advice_raw))
@@ -41,3 +40,4 @@ def simple_next_day_prediction(ticker):
        
     except Exception as e:
         return f"Prediction error: {str(e)}"
+
