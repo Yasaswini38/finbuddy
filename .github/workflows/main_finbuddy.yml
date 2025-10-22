@@ -50,3 +50,4 @@ jobs:
           app-name: 'finbuddy'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B17C3DD47C3547EAA0B4DDA123B20802 }}
+          package: ./app  
