@@ -7,3 +7,5 @@ yfinance
 python-dotenv
 markdown
 torch
+gunicorn
+
