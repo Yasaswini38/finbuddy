@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: read # required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +24,6 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-          pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Upload artifact for deployment
