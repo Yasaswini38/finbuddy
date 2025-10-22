@@ -26,13 +26,6 @@ jobs:
           source venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
-          pip install flake8  # optional, only if you want linting
-
-      # Optional style check – will NOT fail the build
-      - name: Lint code (optional)
-        run: |
-          source venv/bin/activate
-          flake8 . || true
 
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
